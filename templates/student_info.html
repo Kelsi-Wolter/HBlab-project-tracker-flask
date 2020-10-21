@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Info</title>
+</head>
+<body>
+
+<form action="/student">
+    <label>Enter GitHub Username:
+        <input type="text" name="github"/>
+    </label>
+        <input type="submit" value="Display Student"/>
+</form>
+
+  <h1>{{ first }} {{ last }}</h1>
+
+  <p>GitHub Account: {{ github }}</p>
+
+<h2>Projects:</h2>
+<ul>
+{% for project in project_list %}
+  <li>Project Name: {{ project[0] }} Grade: {{ project[1] }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
